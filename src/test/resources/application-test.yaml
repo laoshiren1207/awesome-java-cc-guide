@@ -1,0 +1,23 @@
+spring:
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*.xml
+  type-aliases-package: com.shudao.robotcall.entity
+
+baidu:
+  keyue:
+    accessKey: test_access_key
+    secretKey: test_secret_key
+
+logging:
+  level:
+    com.shudao.robotcall: debug

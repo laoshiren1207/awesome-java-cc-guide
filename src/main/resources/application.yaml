@@ -1,0 +1,28 @@
+spring:
+  profiles:
+    active: dev
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*.xml
+  type-aliases-package: com.example.entity # 实体类所在包
+
+
+baidu:
+  keyue:
+    accessKey:
+    secretKey:
+
+logging:
+  level:
+    com.example: info
+#    com.p6spy: debug
+#    p6spy: debug
